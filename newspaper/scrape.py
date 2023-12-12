@@ -5,3 +5,5 @@ URL = "https://www.reuters.com/world/middle-east/hunger-rises-gaza-un-prepares-v
 article = Article(URL)
 article.download()
 article.parse()
+
+print(article.publish_date)
