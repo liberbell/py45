@@ -8,4 +8,5 @@ for article in website.articles:
     article.download()
     article.parse()
     article.nlp()
-    print(article)
+    print(article.title)
+    print(article.url)
