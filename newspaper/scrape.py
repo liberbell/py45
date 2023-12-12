@@ -7,11 +7,13 @@ article = Article(URL)
 article.download()
 article.parse()
 
-print(article.publish_date)
-print(article.authors)
-print(article.text)
-print(article.title)
+# print(article.publish_date)
+# print(article.authors)
+# print(article.text)
+# print(article.title)
 
 # nltk.download("punkt")
 article.nlp()
-print(article.keywords)
+# print(article.keywords)
+
+print(article.summary.replace("\n", ""))
