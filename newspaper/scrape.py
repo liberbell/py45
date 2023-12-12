@@ -13,3 +13,5 @@ print(article.text)
 print(article.title)
 
 # nltk.download("punkt")
+article.nlp()
+print(article.keywords)
