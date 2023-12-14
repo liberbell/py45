@@ -18,9 +18,10 @@ for article in website.articles:
     article.download()
     article.parse()
     article.nlp()
-    print(article.publish_date)
-    print(article.author)
-    print(article.text)
+    print("Index: ", i)
+    print("Date: ", article.publish_date)
+    print("Author: ", article.authors)
+    print("Article: ", article.text)
 
     if i > 9:
         break
