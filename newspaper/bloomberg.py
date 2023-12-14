@@ -2,7 +2,8 @@ import newspaper
 import csv
 import datetime
 
-csv_date = datetime.datetime.today().strftime("%Y")
+csv_date = datetime.datetime.today().strftime("%Y%m%d")
+csv_file_name = "bloomberg_" + csv_date + ".csv"
 
 URL = "https://www.bloomberg.co.jp/"
 
