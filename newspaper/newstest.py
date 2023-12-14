@@ -25,7 +25,7 @@ for article1 in website.articles:
     print("Date: ", article1.publish_date)
     print("URL: ", article1.url)
     print("Author: ", article1.authors)
-    print("Article: ", article1.text)
+    print("Article: ", article1.summary)
 
     if i > 9:
         break
@@ -40,7 +40,7 @@ for article2 in website2.articles:
     print("Date: ", article2.publish_date)
     print("URL: ", article2.url)
     print("Author: ", article2.authors)
-    print("Article: ", article2.text)
+    print("Article: ", article2.summary)
 
     if i > 9:
         break
