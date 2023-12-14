@@ -30,3 +30,18 @@ for article1 in website.articles:
     if i > 9:
         break
     i += 1
+
+i = 0
+for article2 in website2.articles:
+    article2.download()
+    article2.parse()
+    article2.nlp()
+    print("Index: ", i)
+    print("Date: ", article2.publish_date)
+    print("URL: ", article2.url)
+    print("Author: ", article2.authors)
+    print("Article: ", article2.text)
+
+    if i > 9:
+        break
+    i += 1
