@@ -1,4 +1,8 @@
 import newspaper
+import csv
+import datetime
+
+csv_date = datetime.datetime.today().strftime("%Y")
 
 URL = "https://www.bloomberg.co.jp/"
 
