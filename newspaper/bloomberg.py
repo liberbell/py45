@@ -17,12 +17,17 @@ website = newspaper.build(URL, memoize_articles=False)
 
 i = 0
 for article in website.articles:
+    csvlist = []
     article.download()
     article.parse()
     article.nlp()
     print("Article:", str(i), ":", article.title)
     print(article.url)
     print(article.summary, end="\n\n")
+    csvlist.append(str(i))
+    csvlist.append(article.title)
+    csvlist.append(article.url)
+    csvlist.append(article.summary)
 
     if i > 3:
         break
