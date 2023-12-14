@@ -9,6 +9,8 @@ f = open(csv_file_name, "w", encoding="utf-8", errors="ignore")
 writer = csv.writer(f, lineterminator="\n")
 csv_header = ["Article num", "Title", "URL", "Summary"]
 
+writer.writerow(csv_header)
+
 URL = "https://www.bloomberg.co.jp/"
 
 website = newspaper.build(URL, memoize_articles=False)
