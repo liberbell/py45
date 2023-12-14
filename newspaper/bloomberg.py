@@ -5,6 +5,10 @@ import datetime
 csv_date = datetime.datetime.today().strftime("%Y%m%d")
 csv_file_name = "bloomberg_" + csv_date + ".csv"
 
+f = open(csv_file_name, "w", encoding="utf-8", errors="ignore")
+writer = csv.writer(f, lineterminator="\n")
+csv_header = ["Article num", "Title", "URL", "Summary"]
+
 URL = "https://www.bloomberg.co.jp/"
 
 website = newspaper.build(URL, memoize_articles=False)
@@ -18,6 +22,6 @@ for article in website.articles:
     print(article.url)
     print(article.summary, end="\n\n")
 
-    if i > 9:
+    if i > 3:
         break
     i += 1
