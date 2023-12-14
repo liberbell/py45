@@ -54,3 +54,9 @@ for url in URLS:
         article.download()
         article.parse()
         article.nlp()
+        print("Article: ", i)
+        print("URL: ", article.url)
+
+        if i > 5:
+            break
+        i += 1
