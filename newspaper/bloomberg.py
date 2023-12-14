@@ -9,7 +9,7 @@ for article in website.articles:
     article.download()
     article.parse()
     article.nlp()
-    print(article.title)
+    print("Article:", str(i), ":", article.title)
     print(article.url)
     print(article.summary, end="\n\n")
 
