@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 from datetime import datetime as dt
+import matplotlib.pyplot as plt
 
 
 URL = "https://finance.yahoo.com/quote/AAPL/history?p=AAPL"
@@ -24,3 +25,4 @@ data[0].set_index("Date2", inplace=True)
 # print(data[0]["Adj Close**"].dtype)
 
 data[0]["Adj Close**"].plot(title="AAPL stock price", grid=True)
+plt.plot(data[0]["Data2"], data[0]["Adj Close**"], label="AAPL stock price")
