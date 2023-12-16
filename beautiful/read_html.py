@@ -28,3 +28,5 @@ data[0]["Adj Close**"].plot(title="AAPL stock price", grid=True)
 plt.plot(data[0]["Adj Close**"], label="AAPL stock price")
 plt.legend()
 plt.show()
+
+data[0].to_csv("AAPL_stock_price.csv")
