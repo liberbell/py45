@@ -16,5 +16,8 @@ data[0].dropna(inplace=True)
 # print(data[0].tail())
 
 data[0]["Date2"] = [dt.strptime(i, "%b %d, %Y") for i in data[0]["Date"]]
-print(data[0]["Date2"].head())
+# print(data[0]["Date2"].head())
+# print(data[0].head())
+
+data[0].set_index("Date2", inplace=True)
 print(data[0].head())
