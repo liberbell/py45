@@ -7,7 +7,11 @@ response = requests.get(URL)
 # print(response.text)
 
 # print(response.encoding)
-print(response.headers)
+# print(response.headers)
 
-for key, value in response.headers.items():
-    print(key, " ", value)
+# for key, value in response.headers.items():
+#     print(key, " ", value)
+
+print(response.cookies)
+
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
