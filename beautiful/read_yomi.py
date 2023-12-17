@@ -23,3 +23,4 @@ elems = soup.select("div.headline")
 # print(type(elems[0]))
 
 print(elems[0].h3.a.string)
+print(elems[0].h3.a["href"])
