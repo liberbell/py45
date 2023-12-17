@@ -22,7 +22,10 @@ elems = soup.select("div.headline")
 # print(elems[0].prettify())
 # print(type(elems[0]))
 
-print(elems[0].h3.a.string)
-print(elems[0].h3.a["href"])
+# print(elems[0].h3.a.string)
+# print(elems[0].h3.a["href"])
 # print(elems[0].li.next_sibling.next_sibling.h3.a.string)
-print(elems[0].article.next_sibling.next_sibling.h3.a.string)
+# print(elems[0].article.next_sibling.next_sibling.h3.a.string)
+
+for sibling in elems[0].article.next_sibling:
+    print(sibling.h3.a.string)
