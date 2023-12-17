@@ -19,7 +19,7 @@ header = {"user-agent": user_agent}
 
 # response = requests.get(URL, headers=header, timeout=3)
 # print(response.status_code)
-
+6
 param = {"q": "anti-theft"}
 response = requests.get("https://google.com/search", params=param)
 print(response.status_code)
