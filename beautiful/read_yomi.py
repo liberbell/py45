@@ -15,3 +15,4 @@ soup = BeautifulSoup(response.text, "html.parser")
 
 elems = soup.select("div.headline > article:nth-child(1) > div > h3 > a")
 print(elems[0])
+print(elems[0].contents[0])
