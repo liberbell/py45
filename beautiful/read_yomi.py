@@ -27,5 +27,6 @@ elems = soup.select("div.headline")
 # print(elems[0].li.next_sibling.next_sibling.h3.a.string)
 # print(elems[0].article.next_sibling.next_sibling.h3.a.string)
 
-for sibling in elems[0].article.next_sibling:
-    print(sibling.h3.a.string)
+for sibling in elems[0].article.next_siblings:
+    print(sibling.h3.a.string if sibling != "\n" and sibling.h3 else "")
+    print(sibling.h3.a["href"] if sibling != "\n" and sibling.h3 else "")
