@@ -17,5 +17,10 @@ URL = "https://www.yahoo.co.jp"
 user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
 header = {"user-agent": user_agent}
 
-response = requests.get(URL, headers=header)
+# response = requests.get(URL, headers=header, timeout=3)
+# print(response.status_code)
+
+param = {"q": "anti-theft"}
+response = requests.get("https://google.com/search", params=param)
 print(response.status_code)
+print(response.text)
