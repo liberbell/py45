@@ -19,5 +19,9 @@ elems = soup.find_all(href=re.compile("news.yahoo.co.jp/pickup"))
 # print(elems[1].attrs["href"])
 
 for elem in elems:
-    print(elem.span.string)
-    print(elem.attrs["href"])
+    # print(elem.span.string)
+    # print(elem.attrs["href"])
+    pickup_url = elem.attrs["href"]
+    pickup_response = BeautifulSoup(pickup_url.text, "html.parser")
+    print(pickup_response.attrs["href"])
+    print(pickup_response.span.string)
