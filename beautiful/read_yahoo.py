@@ -23,6 +23,6 @@ for elem in elems:
     # print(elem.attrs["href"])
     pickup_url = elem.attrs["href"]
     pickup_response = requests.get(pickup_url)
-    pickup_soup = BeautifulSoup(pickup_url.text, "html.parser")
+    pickup_soup = BeautifulSoup(pickup_response, "html.parser")
     print(pickup_response.attrs["href"])
     print(pickup_response.span.string)
