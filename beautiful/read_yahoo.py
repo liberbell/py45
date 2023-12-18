@@ -19,7 +19,7 @@ elems = soup.find_all(href=re.compile("news.yahoo.co.jp/pickup"))
 # print(elems[1].attrs["href"])
 
 pickup_urls = [elem.attrs["href"] for elem in elems]
-print(pickup_urls)
+# print(pickup_urls)
 
 for pickup_url in pickup_urls:
     pickup_response = requests.get(pickup_url)
@@ -29,8 +29,8 @@ for pickup_url in pickup_urls:
     news_urls = pickup_elem.a.attrs["href"]
     # print(news_urls)
     news_response = requests.get(news_urls)
-    news_soup = BeautifulSoup(news_response, "html.parser")
-    print(news_soup.text)
+    news_soup = BeautifulSoup(news_response.text, "html.parser")
+    print(news_soup.text.title)
 
 
 
