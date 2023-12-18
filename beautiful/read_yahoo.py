@@ -27,7 +27,10 @@ for pickup_url in pickup_urls:
 
     pickup_elem = pickup_soup.find("p", class_="sc-eFIZSo knQvE")
     news_urls = pickup_elem.a.attrs["href"]
-    print(news_urls)
+    # print(news_urls)
+    news_response = requests.get(news_urls)
+    news_soup = BeautifulSoup(news_response, "html.parser")
+    print(news_soup.text)
 
 
 
