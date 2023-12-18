@@ -26,7 +26,9 @@ for pickup_url in pickup_urls:
     pickup_soup = BeautifulSoup(pickup_response.text, "html.parser")
 
     pickup_elem = pickup_soup.find("p", class_="sc-eFIZSo knQvE")
-    # <p class="sc-eFIZSo knQvE"><a href="https://news.yahoo.co.jp/articles/e55bf12631a35274737a6a29c18284bb26ae8df8" data-cl-params="_cl_vmodule:tpc_main;_cl_link:headline;_cl_position:2;" data-ual-gotocontent="true" class="sc-jcyzAx dJQUSn" data-cl_cl_index="28">記事全文を読む</a></p>
+    print(pickup_elem.a.attrs["href"])
+    news_urls = pickup_elem.a.attrs["href"]
+
 
 
 
