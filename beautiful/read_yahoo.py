@@ -30,7 +30,8 @@ for pickup_url in pickup_urls:
     # print(news_urls)
     news_response = requests.get(news_urls)
     news_soup = BeautifulSoup(news_response.text, "html.parser")
-    # print(news_soup.title.text)
+    print(news_soup.title.text)
+    print(news_urls)
 
     detail_text = news_soup.find(class_=re.compile("Direct"))
     print(detail_text.text if hasattr(detail_text, "text") else "", end="\n\n")
