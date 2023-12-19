@@ -33,7 +33,7 @@ for pickup_url in pickup_urls:
     # print(news_soup.title.text)
 
     detail_text = news_soup.find(class_=re.compile("Direct"))
-    print(detail_text.text, if hasattr(detail_text, "text") else "", end="\n\n")
+    print(detail_text.text if hasattr(detail_text, "text") else "", end="\n\n")
 
     time.sleep(1)
 
