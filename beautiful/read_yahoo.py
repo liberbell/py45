@@ -32,8 +32,8 @@ for pickup_url in pickup_urls:
     news_soup = BeautifulSoup(news_response.text, "html.parser")
     # print(news_soup.title.text)
 
-    detail_text = news_soup.find("article", id_="uamods")
-    print(detail_text.header.h1.text)
+    detail_text = news_soup.find(class_=re.compile("Direct"))
+    print(detail_text)
 
 #     <article id="uamods"><header><h1 class="sc-fnebDD bAGyCr">19日　九州は本格的に雪　各地で厳しい寒さ　北海道はなだれや落雪に
 # for elem in elems:
