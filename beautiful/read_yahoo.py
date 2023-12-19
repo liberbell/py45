@@ -33,7 +33,9 @@ for pickup_url in pickup_urls:
     # print(news_soup.title.text)
 
     detail_text = news_soup.find(class_=re.compile("Direct"))
-    print(detail_text)
+    print(detail_text.text, if hasattr(detail_text, "text") else "", end="\n\n")
+
+    time.sleep(1)
 
 #     <article id="uamods"><header><h1 class="sc-fnebDD bAGyCr">19日　九州は本格的に雪　各地で厳しい寒さ　北海道はなだれや落雪に
 # for elem in elems:
