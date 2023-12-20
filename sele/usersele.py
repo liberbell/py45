@@ -10,3 +10,4 @@ driver = webdriver.Safari()
 driver.get(URL2)
 
 search_bar = driver.find_element(By.NAME, "q")
+search_bar.send_keys("python")
