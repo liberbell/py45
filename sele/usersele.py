@@ -17,5 +17,6 @@ search_bar = driver.find_element(By.NAME, "q")
 search_bar.send_keys("python")
 
 search_bar.submit()
+driver.find_elements(By.XPATH, "//a/h3")
 
 driver.quit()
