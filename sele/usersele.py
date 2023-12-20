@@ -7,11 +7,12 @@ from time import sleep
 URL1 = "https://www.google.com/search?q=python&oq=python&gs_lcrp=EgZjaHJvbWUyDggAEEUYORhDGIAEGIoFMg4IARBFGCcYOxiABBiKBTIGCAIQRRg8MgYIAxBFGDwyBggEEEUYPDIGCAUQRRhBMgYIBhBFGEEyBggHEEUYQdIBCDM3MDNqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8#ip=1"
 URL2 = "https://www.google.com"
 
-driver = webdriver.Chrome()
+
 # driver = webdriver.Safari()
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_experimental_option("detach", True)
+driver = webdriver.Chrome(options=chrome_options)
 driver.get(URL2)
 
 search_bar = driver.find_element(By.NAME, value="q")
