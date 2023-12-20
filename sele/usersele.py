@@ -19,5 +19,8 @@ search_bar.send_keys("python")
 search_bar.submit()
 for elem_h3 in driver.find_elements(By.XPATH, "//a/h3"):
     print(elem_h3.text)
+    elem_a = elem_h3.find_element(By.XPATH, "..")
+    print(elem_a.get_attribute("href"))
+
 
 driver.quit()
