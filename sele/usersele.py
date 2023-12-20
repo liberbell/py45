@@ -10,6 +10,7 @@ URL2 = "https://www.google.com"
 driver = webdriver.Chrome()
 # driver = webdriver.Safari()
 chrome_options = Options()
+chrome_options.add_argument("--headless")
 chrome_options.add_experimental_option("detach", True)
 driver.get(URL2)
 
