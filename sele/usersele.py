@@ -9,8 +9,8 @@ URL2 = "https://www.google.com"
 
 driver = webdriver.Chrome()
 # driver = webdriver.Safari()
-chrome_options = Options()
-chrome_options.add_experimental_option("detach", True)
+# chrome_options = Options()
+# chrome_options.add_experimental_option("detach", True)
 driver.get(URL2)
 
 search_bar = driver.find_element(By.NAME, "q")
