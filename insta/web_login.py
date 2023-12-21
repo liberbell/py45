@@ -17,6 +17,7 @@ with open(config_txt_path, encoding='utf-8') as fp:
 
 
 chrome_options = Options()
+# chrome_options.add_argument("--headless")
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
 driver.get(URL1)
