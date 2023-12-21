@@ -21,6 +21,9 @@ search_bar = driver.find_element(By.NAME, value="q")
 search_bar.send_keys("python")
 
 search_bar.submit()
+
+csv_date = datetime.datetime.today().strftime(%Y%m%d)
+csv_file_name = "google_python_" + csv_date + ".csv"
 for elem_h3 in driver.find_elements(By.XPATH, value="//a/h3"):
     print(elem_h3.text)
     elem_a = elem_h3.find_element(by=By.XPATH, value="..")
