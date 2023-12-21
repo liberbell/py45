@@ -37,7 +37,8 @@ for elem_h3 in driver.find_elements(By.XPATH, value="//a/h3"):
     csv_list.append(elem_h3.text)
     elem_a = elem_h3.find_element(by=By.XPATH, value="..")
     csv_list.append(elem_a.get_attribute("href"))
+    writer.writerow(csv_list)
     ranking += 1
 
-
+f.close()
 driver.quit()
