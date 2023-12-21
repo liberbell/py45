@@ -25,7 +25,7 @@ driver.get(URL1)
 
 error_flag = False
 try:
-    username_input = driver.find_element(By.)
+    username_input = driver.find_element(By.XPATH, value="//input[@aria-label='電話番号、ユーザーネーム、メールアドレス']")
 except Exception:
     error_flag = True
     print("User name or Password incorrect")
