@@ -22,7 +22,7 @@ search_bar.send_keys("python")
 
 search_bar.submit()
 
-csv_date = datetime.datetime.today().strftime(%Y%m%d)
+csv_date = datetime.datetime.today().strftime("%Y%m%d")
 csv_file_name = "google_python_" + csv_date + ".csv"
 
 f = open(csv_file_name, "w", encoding="utf8", errors="ignore")
