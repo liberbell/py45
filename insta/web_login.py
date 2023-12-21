@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from time import sleep
 import configparser
 from selenium.webdriver.chrome.options import Options
@@ -21,3 +22,10 @@ chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
 driver.get(URL1)
+
+error_flag = False
+try:
+    username_input = driver.find_element(By.)
+except Exception:
+    error_flag = True
+    print("User name or Password incorrect")
