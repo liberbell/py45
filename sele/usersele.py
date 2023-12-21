@@ -28,11 +28,15 @@ csv_file_name = "google_python_" + csv_date + ".csv"
 f = open(csv_file_name, "w", encoding="utf8", errors="ignore")
 writer = csv.writer(f, lineterminator="\n")
 csv_header = ["List No","Title", "URL"]
+writer.writerow(csv_header)
 
+ranking = 1
 for elem_h3 in driver.find_elements(By.XPATH, value="//a/h3"):
+    csv_list = []
     print(elem_h3.text)
     elem_a = elem_h3.find_element(by=By.XPATH, value="..")
     print(elem_a.get_attribute("href"))
+    ranking += 1
 
 
 driver.quit()
