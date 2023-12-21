@@ -26,6 +26,9 @@ csv_date = datetime.datetime.today().strftime(%Y%m%d)
 csv_file_name = "google_python_" + csv_date + ".csv"
 
 f = open(csv_file_name, "w", encoding="utf8", errors="ignore")
+writer = csv.writer(f, lineterminator="\n")
+csv_header = ["List No","Title", "URL"]
+
 for elem_h3 in driver.find_elements(By.XPATH, value="//a/h3"):
     print(elem_h3.text)
     elem_a = elem_h3.find_element(by=By.XPATH, value="..")
