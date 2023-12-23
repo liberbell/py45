@@ -45,5 +45,6 @@ if error_flag is False:
     try:
         sleep(1)
         notnow_button = driver.find_element(By.XPATH, value="//button[text()='後で]")
+        notnow_button.click()
     except Exception:
         pass
