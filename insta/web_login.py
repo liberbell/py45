@@ -26,6 +26,7 @@ driver.get(URL1)
 error_flag = False
 try:
     username_input = driver.find_element(By.XPATH, value="//input[@aria-label='電話番号、ユーザーネーム、メールアドレス']")
+    #<input aria-label="電話番号、ユーザーネーム、メールアドレス" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" class="_aa4b _add6 _ac4d _ap35" dir="" type="text" value="" name="username">
     username_input.send_keys(user_id)
     sleep(1)
     password_input = driver.find_element(By.XPATH, value="//input[@aria-label='パスワード']")
