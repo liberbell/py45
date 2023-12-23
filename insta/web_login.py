@@ -15,7 +15,7 @@ with open(config_txt_path, encoding='utf-8') as fp:
     read_default = config_txt['Login']
     user_id = read_default.get('User_id')
     password = read_default.get("Password")
-    print(user_id, password)
+    # print(user_id, password)
 
 
 chrome_options = Options()
