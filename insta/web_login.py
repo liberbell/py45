@@ -31,6 +31,10 @@ try:
     password_input = driver.find_element(By.XPATH, value="//input[@aria-label='パスワード']")
     password_input.send_keys(password)
     sleep(1)
+
+    login_button = driver.find_element(By.XPATH, value="//button[@type='submit']")
+    login_button.submit()
+    sleep(1)
 except Exception:
     error_flag = True
     print("User name or Password incorrect")
