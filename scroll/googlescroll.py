@@ -19,4 +19,8 @@ if error_flag is False:
         driver.get(URL1)
         sleep(2)
 
+    except Exception:
+        print("Somthing failed")
+        error_flag = True
+
 # driver.quit()
