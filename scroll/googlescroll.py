@@ -26,16 +26,14 @@ if error_flag is False:
 error_flag = False
 if error_flag is False:
     try:
-        post_count = 50
-        if post_count > 12:
-            scroll_count = int(post_count / 12) + 1
-            try:
-                for i in range(scroll_count):
-                    driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
-                    sleep(2)
-            except Exception:
-                print("Error with scrolling")
-                error_flag = True
+        scroll_count = 10
+        try:
+            for i in range(scroll_count):
+                driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
+                sleep(2)
+        except Exception:
+            print("Error with scrolling")
+            error_flag = True
 
     except Exception:
         print("cant scroll")
