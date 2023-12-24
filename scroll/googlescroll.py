@@ -40,8 +40,10 @@ if error_flag is False:
                     all_images.append(image)
                 driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
                 sleep(2)
-                if i > 5:
+                if i > 4:
                     break
+
+            dict.fromkeys(all_images)
             for index, image in enumerate(all_images):
                 print("Image index: " + str(index))
                 print("Image src: " + image["src"])
