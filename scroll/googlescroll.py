@@ -43,7 +43,7 @@ if error_flag is False:
                 if i > 4:
                     break
 
-            dict.fromkeys(all_images)
+            all_images = list(dict.fromkeys(all_images))
             for index, image in enumerate(all_images):
                 print("Image index: " + str(index))
                 print("Image src: " + image["src"])
