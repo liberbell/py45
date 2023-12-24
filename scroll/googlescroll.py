@@ -11,3 +11,6 @@ driver.get(URL1)
 
 search_bar = driver.find_element(By.NAME, value="q")
 search_bar.send_keys("python")
+search_bar.submit()
+
+# driver.quit()
