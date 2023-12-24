@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from bs4 import BeautifulSoup
 from time import sleep
 
 URL1 = "https://www.google.com"
@@ -32,8 +33,9 @@ if error_flag is False:
     try:
         scroll_count = 10
         try:
-            all_images =[]
+            all_images = []
             for i in range(scroll_count):
+                soup = BeautifulSoup(driver.page_source, "html.parser")
                 driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
                 sleep(2)
                 if i > 5:
