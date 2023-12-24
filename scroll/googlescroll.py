@@ -23,4 +23,14 @@ if error_flag is False:
         print("Somthing failed")
         error_flag = True
 
+error_flag = False
+if error_flag is False:
+    try:
+        driver.get(URL1)
+        sleep(2)
+
+    except Exception:
+        print("cant scroll")
+        error_flag = True
+
 # driver.quit()
