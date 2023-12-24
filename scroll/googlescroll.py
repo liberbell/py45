@@ -31,6 +31,8 @@ if error_flag is False:
             for i in range(scroll_count):
                 driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
                 sleep(2)
+                if i > 5:
+                    break
         except Exception:
             print("Error with scrolling")
             error_flag = True
