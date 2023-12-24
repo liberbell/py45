@@ -29,8 +29,10 @@ if error_flag is False:
         post_count = 50
         if post_count > 12:
             scroll_count = int(post_count / 12) + 1
-            for i in range(scroll_count):
-                driver.execute_script()
+            try:
+                for i in range(scroll_count):
+                    driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
+            except Exception:
 
     except Exception:
         print("cant scroll")
