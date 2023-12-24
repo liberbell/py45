@@ -9,14 +9,17 @@ chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
 
-search_bar = driver.find_element(By.NAME, value="q")
-search_bar.send_keys("python")
-search_bar.submit()
+# search_bar = driver.find_element(By.NAME, value="q")
+# search_bar.send_keys("python")
+# search_bar.submit()
 
 error_flag = False
 if error_flag is False:
     try:
         driver.get(URL1)
+        search_bar = driver.find_element(By.NAME, value="q")
+        search_bar.send_keys("python")
+        search_bar.submit()
         sleep(2)
 
     except Exception:
