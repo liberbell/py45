@@ -26,8 +26,7 @@ if error_flag is False:
 error_flag = False
 if error_flag is False:
     try:
-        driver.get(URL1)
-        sleep(2)
+        post_count = 50
 
     except Exception:
         print("cant scroll")
