@@ -27,6 +27,8 @@ error_flag = False
 if error_flag is False:
     try:
         post_count = 50
+        if post_count > 12:
+            scroll_count = int(post_count / 12)
 
     except Exception:
         print("cant scroll")
