@@ -44,4 +44,5 @@ if error_flag is False:
         print("cant scroll")
         error_flag = True
 
-# driver.quit()
+sleep(3)
+driver.quit()
