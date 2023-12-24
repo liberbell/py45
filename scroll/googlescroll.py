@@ -42,6 +42,9 @@ if error_flag is False:
                 sleep(2)
                 if i > 5:
                     break
+            for index, image in enumerate(all_images):
+                print("Image index: " + str(index))
+                print("Image src: " + image["src"])
         except Exception:
             print("Error with scrolling")
             error_flag = True
