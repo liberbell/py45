@@ -11,6 +11,8 @@ import shutil
 URL1 = "https://www.google.com"
 URL2 = "https://www.google.com/imghp?hl=ja&tab=ri&authuser=0&ogbl"
 
+PATH = "/photo"
+
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
@@ -44,7 +46,7 @@ if error_flag is False:
                     all_images.append(image)
                 driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
                 sleep(2)
-                if i > 4:
+                if i > 3:
                     break
 
             all_images = list(dict.fromkeys(all_images))
@@ -59,6 +61,12 @@ if error_flag is False:
     except Exception:
         print("cant scroll")
         error_flag = True
+
+if error_flag is False:
+    for index, image in enumerate(all_images):
+        filename = "image_" + str(index) + ".jpg"
+        image_path = os.path.join(PATH, filename)
+
 
 sleep(3)
 driver.quit()
