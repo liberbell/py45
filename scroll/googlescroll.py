@@ -3,6 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from time import sleep
+import requests
+import re
+import os
+import shutil
 
 URL1 = "https://www.google.com"
 URL2 = "https://www.google.com/imghp?hl=ja&tab=ri&authuser=0&ogbl"
@@ -47,7 +51,7 @@ if error_flag is False:
             for index, image in enumerate(all_images):
                 print("Image index: " + str(index))
                 print("Image src: " + image["src"])
-                
+
         except Exception:
             print("Error with scrolling")
             error_flag = True
