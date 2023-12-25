@@ -69,6 +69,9 @@ if error_flag is False:
 
         image_link = image["src"]
         url_ptn = re.compile(r"^(https)://")
+        res = url_ptn.match(image_link)
+        if res:
+            pass
 
 
 sleep(3)
