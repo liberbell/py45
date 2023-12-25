@@ -67,6 +67,9 @@ if error_flag is False:
         filename = "image_" + str(index) + ".jpg"
         image_path = os.path.join(PATH, filename)
 
+        image_link = image["src"]
+        url_ptn = re.compile(r"^(https)://")
+
 
 sleep(3)
 driver.quit()
