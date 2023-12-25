@@ -51,8 +51,8 @@ if error_flag is False:
 
             all_images = list(dict.fromkeys(all_images))
             for index, image in enumerate(all_images):
-                print("Image index: " + str(index))
-                print("Image src: " + image["src"])
+                # print("Image index: " + str(index))
+                # print("Image src: " + image["src"])
 
         except Exception:
             print("Error with scrolling")
@@ -70,6 +70,7 @@ if error_flag is False:
         image_link = image["src"]
         url_ptn = re.compile(r"^(https)://")
         res = url_ptn.match(image_link)
+        print(res)
         if res:
             pass
 
