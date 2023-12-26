@@ -54,7 +54,8 @@ if error_flag is False:
                 print("Image index: " + str(index))
                 print("Image src: " + image["src"])
             
-        except Exception:
+        except Exception as err:
+            print(err)
             print("Error with scolling")
             error_flag = True
 
