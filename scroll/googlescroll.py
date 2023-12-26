@@ -37,7 +37,7 @@ if error_flag is False:
 error_flag = False
 if error_flag is False:
     try:
-        scroll_count = 10
+        scroll_count = 4
         try:
             all_images = []
             for i in range(scroll_count):
@@ -57,7 +57,7 @@ if error_flag is False:
         except Exception as err:
             print("error: ", err)
             print("Error with scolling")
-            error_flag = True
+            error_flag = False
 
     except Exception:
         print("cant scroll")
