@@ -51,8 +51,8 @@ if error_flag is False:
 
             all_images = list(dict.fromkeys(all_images))
             for index, image in enumerate(all_images):
-                # print("Image index: " + str(index))
-                # print("Image src: " + image["src"])
+                print("Image index: " + str(index))
+                print("Image src: " + image["src"])
             
         except Exception:
             print("Error with scolling")
