@@ -55,7 +55,7 @@ if error_flag is False:
                 print("Image src: " + image["src"])
             
         except Exception as err:
-            print(err)
+            print("error: ", err)
             print("Error with scolling")
             error_flag = True
 
@@ -73,7 +73,7 @@ if error_flag is False:
         res = url_ptn.match(image_link)
         print(res)
         if res:
-            pass
+            response = requests.get(image_link, stream=True)
 
 
 sleep(3)
