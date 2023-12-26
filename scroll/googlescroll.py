@@ -67,13 +67,14 @@ if error_flag is False:
     for index, image in enumerate(all_images):
         filename = "image_" + str(index) + ".jpg"
         image_path = os.path.join(PATH, filename)
+        print(image)
 
-        image_link = image["src"]
-        url_ptn = re.compile(r"^(https)://")
-        res = url_ptn.match(image_link)
-        print(res)
-        if res:
-            response = requests.get(image_link, stream=True)
+        # image_link = image["src"]
+        # url_ptn = re.compile(r"^(https)://")
+        # res = url_ptn.match(image_link)
+        # print(res)
+        # if res:
+        #     response = requests.get(image_link, stream=True)
 
 
 sleep(3)
