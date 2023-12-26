@@ -53,7 +53,7 @@ if error_flag is False:
             for index, image in enumerate(all_images):
                 # print("Image index: " + str(index))
                 # print("Image src: " + image["src"])
-
+                
         except Exception:
             print("Error with scrolling")
             error_flag = True
