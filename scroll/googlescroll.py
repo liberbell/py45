@@ -69,7 +69,7 @@ if error_flag is False:
         image_path = os.path.join(PATH, filename)
         print(image)
 
-        # image_link = image["src"]
+        image_link = image["data-src"]
         # url_ptn = re.compile(r"^(https)://")
         # res = url_ptn.match(image_link)
         # print(res)
